@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(20, 20, 20);
+}
+
+.maintext {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  color: skyblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+}
