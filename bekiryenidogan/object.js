@@ -8,44 +8,19 @@ function main() {
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
   renderer.outputEncoding = THREE.sRGBEncoding;
 
-  const fov = 30;
+  const fov = 25;
   const aspect = 2; // the canvas default
   const near = 0.1;
   const far = 100;
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(0, 10, 20);
+  camera.position.set(0, 10, -20);
 
   const controls = new OrbitControls(camera, canvas);
   controls.target.set(0, 2, 0);
-  controls.update();
   controls.autoRotate = true;
+  controls.update();
 
   const scene = new THREE.Scene();
-  //   scene.background = new THREE.Color("black");
-
-  //   {
-  //     const planeSize = 40;
-
-  //     const loader = new THREE.TextureLoader();
-  //     const texture = loader.load(
-  //       "https://threejs.org/manual/examples/resources/images/checker.png"
-  //     );
-  //     texture.encoding = THREE.sRGBEncoding;
-  //     texture.wrapS = THREE.RepeatWrapping;
-  //     texture.wrapT = THREE.RepeatWrapping;
-  //     texture.magFilter = THREE.NearestFilter;
-  //     const repeats = planeSize / 2;
-  //     texture.repeat.set(repeats, repeats);
-
-  //     const planeGeo = new THREE.PlaneGeometry(planeSize, planeSize);
-  //     const planeMat = new THREE.MeshPhongMaterial({
-  //       map: texture,
-  //       side: THREE.DoubleSide,
-  //     });
-  //     const mesh = new THREE.Mesh(planeGeo, planeMat);
-  //     mesh.rotation.x = Math.PI * -0.5;
-  //     scene.add(mesh);
-  //   }
 
   {
     const skyColor = 0xb1e1ff; // light blue
@@ -86,8 +61,8 @@ function main() {
 
   function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
-    const width = 300;
-    const height = 300;
+    const width = 350;
+    const height = 350;
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
       renderer.setSize(width, height, false);
@@ -101,6 +76,7 @@ function main() {
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
     }
+    controls.update();
 
     renderer.render(scene, camera);
 
