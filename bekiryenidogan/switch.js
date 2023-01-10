@@ -19,6 +19,9 @@
     });
 
     document.body.classList.add("bg-dark");
+    document
+      .getElementById("dark-mode-icon")
+      .classList.replace("fa-sun", "fa-moon");
 
     if (document.body.classList.contains("text-dark")) {
       document.body.classList.replace("text-dark", "text-light");
@@ -50,6 +53,9 @@
     });
 
     document.body.classList.add("bg-light");
+    document
+      .getElementById("dark-mode-icon")
+      .classList.replace("fa-moon", "fa-sun");
 
     if (document.body.classList.contains("text-light")) {
       document.body.classList.replace("text-light", "text-dark");
