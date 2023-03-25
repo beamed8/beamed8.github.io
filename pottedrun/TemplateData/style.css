@@ -10,7 +10,6 @@ body {
   display: grid;
   min-height: 200px;
   border: 8px solid;
-  padding: 1rem;
 }
 
 .full {
