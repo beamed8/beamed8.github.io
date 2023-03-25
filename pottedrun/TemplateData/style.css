@@ -39,32 +39,27 @@ body {
 #unity-loading-bar {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 42%;
   transform: translate(-50%, -50%);
   display: none;
 }
 #unity-logo {
-  /* width: 154px;
-  height: 130px; */
-  /* background: url("unity-logo-dark.png") no-repeat center; */
-}
-#unity-progress-bar-empty {
   width: 154px;
   height: 130px;
-  /* width: 141px;
-  height: 18px; */
-  /* border: 2px solid green; */
+  background: url("unity-logo-dark.png") no-repeat center;
+}
+#unity-progress-bar-empty {
+  width: 141px;
+  height: 18px;
   margin-top: 10px;
   margin-left: 6.5px;
-  background: url("unity-logo-dark-export.png") no-repeat center;
-  /* background: url("progress-bar-empty-dark.png") no-repeat center; */
+  background: url("progress-bar-empty-dark.png") no-repeat center;
 }
 #unity-progress-bar-full {
   width: 0%;
   height: 18px;
   margin-top: 10px;
-  background: url("unity-logo-dark.png") no-repeat center;
-  /* background: url("progress-bar-full-dark.png") no-repeat center; */
+  background: url("progress-bar-full-dark.png") no-repeat center;
 }
 #unity-footer {
   position: relative;
