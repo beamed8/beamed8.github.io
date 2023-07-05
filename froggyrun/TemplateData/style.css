@@ -44,13 +44,12 @@ body {
 }
 #unity-logo {
   text-align: center;
+  width: 128px;
+  height: 130px;
+  background: url("frogblink.gif") no-repeat center;
 }
 #unity-logo img {
   max-width: 80%;
-}
-#frog {
-  text-align: center;
-  background: url("frogblink.gif") no-repeat center;
 }
 #unity-progress-bar-empty {
   width: 80%;
